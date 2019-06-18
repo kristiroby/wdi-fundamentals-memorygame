@@ -25,13 +25,17 @@ const cards = [
 const cardsInPlay = [];
 
 const checkForMatch = function () {
+
 	if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match!");
 	} 
 	else if (cardsInPlay.length === 2 && cardsInPlay[0] !== cardsInPlay[1]) {
 		alert("Sorry try again");
+	}
+	else if (cardsInPlay.length === 4 && cardsInPlay[2] == cardsInPlay[3]) {
+		alert ("You won!");
 	}	
-}
+};
 
 function flipCard () {
 	const cardId = this.getAttribute('data-id');
@@ -56,6 +60,10 @@ function createBoard() {
 }
 };
 createBoard();
+
+
+
+
 
 
 
